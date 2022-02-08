@@ -1,0 +1,19 @@
+<p>main works!</p>
+
+<div>
+  <form [formGroup]="form" (ngSubmit)="go()">
+    <select formControlName="startFrom">
+      <option *ngFor="let num of numArr">{{num}}</option>
+    </select>
+    <div>
+      <button type="submit">Go</button>
+    </div>
+  </form>
+</div>
+
+<ul>
+  <li *ngFor="let num of numArr">
+    <a [routerLink]="['/number', num]">{{num}}</a>
+  </li>
+</ul>
+
